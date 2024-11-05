@@ -35,7 +35,9 @@ class App
     // show($this->controller);
 
     // $controller = new Home;
-    $controller = new $this->controller;
+
+    $controller = new ('\Controller\\'.$this->controller);
+    // $controller = new $this->controller;
     
     /* select method */
 		if(!empty($URL[1]))
