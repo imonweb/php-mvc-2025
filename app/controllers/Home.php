@@ -12,7 +12,7 @@ Class Home
   
   public function index()
   {
-    // $data['username'] = empty($_SESSION['USER']) ? 'User':$_SESSION['USER']->email;
+    $data['username'] = empty($_SESSION['USER']) ? 'User':$_SESSION['USER']->email;
 
     $user = new \Model\User;
     $this->view('home');
